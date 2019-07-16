@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<project name="Fire-arm-Ontology" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<target name="init-fx-tasks">
+		<path id="fxant">
+			<filelist>
+				<file name="${java.home}\..\lib\ant-javafx.jar"/>
+				<file name="${java.home}\lib\jfxrt.jar"/>
+			</filelist>
+		</path>
+	
+		<taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
+			uri="javafx:com.sun.javafx.tools.ant"
+			classpathref="fxant"/>
+	</target>
+	<target name="setup-staging-area">
+		<delete dir="externalLibs" />
+		<delete dir="project" />
+		<delete dir="projectRefs" />
+	
+		<mkdir dir="externalLibs" />
+	
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="collection-0.7.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="httpclient-cache-4.5.5.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jcl-over-slf4j-1.7.26.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-codec-1.11.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-dboe-base-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="slf4j-api-1.7.26.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="httpclient-4.5.5.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-shaded-guava-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-tdb-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-iri-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="slf4j-log4j12-1.7.26.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-csv-1.5.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-dboe-transaction-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="libthrift-0.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="httpcore-4.4.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-cli-1.4.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-rdfconnection-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jackson-databind-2.9.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jsonld-java-0.12.3.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="log4j-1.2.17.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-cmds-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-io-2.6.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-base-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-compress-1.18.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-tdb2-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-dboe-trans-data-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="commons-lang3-3.4.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-dboe-index-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-arq-3.12.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jackson-core-2.9.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jackson-annotations-2.9.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\promod\Desktop\prot\apache-jena-3.12.0\lib">
+				<filename name="jena-core-3.12.0.jar"/>
+			</fileset>
+		</copy>
+	
+		<mkdir dir="project" />
+		<copy todir="project">
+			<fileset dir="C:\Users\promod\eclipse-workspace\Fire-arm-Ontology">
+				<include name="src/**" />
+			</fileset>
+		</copy>
+	
+		<mkdir dir="projectRefs" />
+	</target>
+	<target name='do-compile'>
+		<delete dir="build" />
+		<mkdir dir="build/src" />
+		<mkdir dir="build/libs" />
+		<mkdir dir="build/classes" />
+	
+		<!-- Copy project-libs references -->
+		<copy todir="build/libs">
+			<fileset dir="externalLibs">
+				<include name="commons-csv-1.5.jar"/>
+				<include name="httpcore-4.4.9.jar"/>
+				<include name="jena-arq-3.12.0.jar"/>
+				<include name="jena-dboe-base-3.12.0.jar"/>
+				<include name="jackson-annotations-2.9.0.jar"/>
+				<include name="httpclient-4.5.5.jar"/>
+				<include name="commons-codec-1.11.jar"/>
+				<include name="libthrift-0.12.0.jar"/>
+				<include name="jackson-databind-2.9.9.jar"/>
+				<include name="jena-dboe-trans-data-3.12.0.jar"/>
+				<include name="jena-base-3.12.0.jar"/>
+				<include name="commons-compress-1.18.jar"/>
+				<include name="jena-dboe-transaction-3.12.0.jar"/>
+				<include name="jcl-over-slf4j-1.7.26.jar"/>
+				<include name="commons-cli-1.4.jar"/>
+				<include name="jena-dboe-index-3.12.0.jar"/>
+				<include name="log4j-1.2.17.jar"/>
+				<include name="jena-shaded-guava-3.12.0.jar"/>
+				<include name="jena-tdb-3.12.0.jar"/>
+				<include name="jena-rdfconnection-3.12.0.jar"/>
+				<include name="slf4j-log4j12-1.7.26.jar"/>
+				<include name="jena-core-3.12.0.jar"/>
+				<include name="jackson-core-2.9.9.jar"/>
+				<include name="commons-io-2.6.jar"/>
+				<include name="commons-lang3-3.4.jar"/>
+				<include name="collection-0.7.jar"/>
+				<include name="httpclient-cache-4.5.5.jar"/>
+				<include name="slf4j-api-1.7.26.jar"/>
+				<include name="jena-tdb2-3.12.0.jar"/>
+				<include name="jsonld-java-0.12.3.jar"/>
+				<include name="jena-cmds-3.12.0.jar"/>
+				<include name="jena-iri-3.12.0.jar"/>
+			</fileset>
+		</copy>
+	
+		<!-- Copy project references -->
+	
+		<!-- Copy project sources itself -->
+		<copy todir="build/src">
+			<fileset dir="project/src">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+	
+		<javac includeantruntime="false" source="1.8" target="1.8" srcdir="build/src" destdir="build/classes" encoding="Cp1252">
+			<classpath>
+				<fileset dir="build/libs">
+					<include name="*"/>
+				</fileset>
+			</classpath>
+		</javac>
+	
+		<!-- Copy over none Java-Files -->
+		<copy todir="build/classes">
+		<fileset dir="project/src">
+			<exclude name="**/*.java"/>
+		</fileset>
+		</copy>
+	
+	
+	</target>
+	<target name="do-deploy" depends="setup-staging-area, do-compile, init-fx-tasks">
+		<delete file="dist"/>
+		<delete file="deploy" />
+	
+		<mkdir dir="dist" />
+		<mkdir dir="dist/libs" />
+	
+		<copy todir="dist/libs">
+			<fileset dir="externalLibs">
+				<include name="*" />
+			</fileset>
+		</copy>
+	
+	
+		<fx:resources id="appRes">
+			<fx:fileset dir="dist" includes="Fire-arm-Ontology.jar"/>
+			<fx:fileset dir="dist" includes="libs/*"/>
+		</fx:resources>
+	
+		<fx:application id="fxApplication"
+			name=""
+			mainClass="application.Main"
+		/>
+	
+		<mkdir dir="build/classes/META-INF" />
+	
+	
+	
+		<fx:jar destfile="dist/Fire-arm-Ontology.jar">
+			<fx:application refid="fxApplication"/>
+			<fileset dir="build/classes">
+			</fileset>
+			<fx:resources refid="appRes"/>
+	
+			<manifest>
+				<attribute name="Implementation-Vendor" value="SamSoft"/>
+				<attribute name="Implementation-Title" value=""/>
+				<attribute name="Implementation-Version" value="v_1.3"/>
+				<attribute name="JavaFX-Feature-Proxy" value="None"/>
+			</manifest>
+		</fx:jar>
+	
+	
+	
+	
+	</target>
+</project>

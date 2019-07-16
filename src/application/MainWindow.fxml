@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="679.0" prefWidth="1252.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ComboBox fx:id="functionBox" layoutX="27.0" layoutY="94.0" prefHeight="39.0" prefWidth="160.0" />
+      <ComboBox fx:id="configBox" layoutX="198.0" layoutY="94.0" prefHeight="39.0" prefWidth="160.0" />
+      <ComboBox fx:id="purposeBox" layoutX="370.0" layoutY="94.0" prefHeight="39.0" prefWidth="160.0" />
+      <Button layoutX="1141.0" layoutY="94.0" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="100.0" text="Search" />
+      <Text layoutX="451.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firearm Knowledge Base" wrappingWidth="350.205078125">
+         <font>
+            <Font size="26.0" />
+         </font></Text>
+      <TableView fx:id="tableView" layoutX="27.0" layoutY="170.0" prefHeight="489.0" prefWidth="1209.0">
+        <columns>
+          <TableColumn fx:id="gunName" prefWidth="226.0" text="Gun name" />
+          <TableColumn fx:id="weight" prefWidth="240.0" text="Weight (Pounds) " />
+            <TableColumn fx:id="range" prefWidth="263.0" text="Range (miles)" />
+            <TableColumn fx:id="fireRate" prefWidth="236.0" text="FireRate (bulletsPerSec)" />
+            <TableColumn fx:id="price" prefWidth="238.0" text="Price (USD)" />
+        </columns>
+      </TableView>
+      <TextField fx:id="priceFrom" layoutX="850.0" layoutY="94.0" prefHeight="39.0" prefWidth="77.0" />
+      <TextField fx:id="priceTo" layoutX="976.0" layoutY="94.0" prefHeight="39.0" prefWidth="77.0" />
+      <Text layoutX="759.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price From" />
+      <Text layoutX="949.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+      <ComboBox fx:id="gunTypeBox" layoutX="551.0" layoutY="94.0" prefHeight="39.0" prefWidth="160.0" />
+   </children>
+</AnchorPane>
