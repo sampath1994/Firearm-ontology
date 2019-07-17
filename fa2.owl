@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#"
+<rdf:RDF xmlns="http://www.semanticweb.org/promod/ontologies/2019/6/firearm"
      xml:base="http://www.semanticweb.org/promod/ontologies/2019/6/firearm"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:firearm="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm"/>
     
 
@@ -63,37 +64,25 @@
 
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasFireRate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasFireRate">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Gun"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasFireRate"/>
     
 
 
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasPrice">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Gun"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasPrice"/>
     
 
 
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasRange -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasRange">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Gun"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasRange"/>
     
 
 
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasWeight -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasWeight">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Gun"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasWeight"/>
     
 
 
@@ -160,6 +149,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coaxial">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Machinegun"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combact-pistol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combact-pistol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Pistol"/>
     </owl:Class>
     
 
@@ -344,12 +341,6 @@
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Shotgun -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Shotgun">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#hasPurpose"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Gun"/>
     </owl:Class>
     
@@ -379,14 +370,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Wheellock -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Wheellock">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Pistol"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#sawed-offshotgun -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#sawed-offshotgun">
@@ -412,6 +395,139 @@
     
 
 
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#AK-47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#AK-47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Assault-rifle"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">775</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">985</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.48</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#AK-M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#AK-M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Assault-rifle"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">775</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1640</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.42</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Accuracy_International_AW50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Accuracy_International_AW50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Military-sniper"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2625</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.56</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Accuracy_International_AX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Accuracy_International_AX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Lawenforcement-sniper"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4921</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.21</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Air_Tronic_GS-777 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Air_Tronic_GS-777">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-tank"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2625</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.72</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Akdal_MKA_1919 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Akdal_MKA_1919">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combat"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4800</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">165</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.17</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-Material_Rifle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-Material_Rifle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-tank"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15000</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.36</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-Tank_Rocket_Launcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-Tank_Rocket_Launcher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Anti-tank"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">351.26</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Arisaka_Type_44_cavalry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Arisaka_Type_44_cavalry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Carbine"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Semi-automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1968</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.28</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle">
@@ -428,10 +544,177 @@
     
 
 
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Baretta_ARX-160 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Baretta_ARX-160">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Carbine"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.61</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Baretta_REC7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Baretta_REC7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Carbine"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">650</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.04</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_AR70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_AR70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Carbine"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">650</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5400</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1600</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.82</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_Model_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_Model_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Machine-pistol"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">550</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">655</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.61</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_RS-200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Beretta_RS-200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combat"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">131</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.7</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Blunderbuss -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Blunderbuss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#sawed-offshotgun"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4300</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.63</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Cal. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Cal.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Caplock"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1900</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.7</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Colt_Single_Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Colt_Single_Action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Single-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Purpose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Cooper_Pocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Cooper_Pocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">900</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">512</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.2</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double_Trigger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double_Trigger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coach-gun"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.12</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Duval_Model -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Duval_Model">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Flintlock"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">105</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.2</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -444,10 +727,99 @@
     
 
 
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Enfield_L7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Enfield_L7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coaxial"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">750</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2624</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">24.03</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#FN_MAG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#FN_MAG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coaxial"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3937</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.99</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Franchi_SPAS-12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Franchi_SPAS-12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combat"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6400</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">328</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.7</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General_electric_M134_Minigun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General_electric_M134_Minigun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Rotarycanon"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3280</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.27</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Configuration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Harpers_Ferry_Model_1803 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Harpers_Ferry_Model_1803">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Muzzle-loading"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.21</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Henry_model_navy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Henry_model_navy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Flintlock"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1260</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">130</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.12</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -460,13 +832,73 @@
     
 
 
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Johnson_Model -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Johnson_Model">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Flintlock"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1450</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">124</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.1</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#K-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#K-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Bullup"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1300</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#KBP_A-91 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#KBP_A-91">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Bullup"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3280</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.48</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Lithgow_F88 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Lithgow_F88">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Bullup"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6700</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">980</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.94</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Configuration"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
     </owl:NamedIndividual>
     
 
@@ -475,13 +907,29 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#M240">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coaxial"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">450</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.23</hasWeight>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">750</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5905</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.56</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#MI6A4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#MI6A4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Assault-rifle"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">968</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.5</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -490,6 +938,172 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Function"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Mk38_Mod_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Mk38_Mod_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Naval-artillery"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8202</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1102.4</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#NORINCO_type_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#NORINCO_type_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General-purpose"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">750</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8300</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4920</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.56</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ordance_revolver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ordance_revolver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">540</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.4</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Percussion_pistol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Percussion_pistol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Caplock"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2300</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.2</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Pindad_G2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Pindad_G2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combact-pistol"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Semi-automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">950</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.26</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Piston_Model_2000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Piston_Model_2000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Combact-pistol"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Semi-automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">620</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#RP-46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#RP-46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General-purpose"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">650</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2624</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">28.66</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington-rider -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington-rider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1050</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">550</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.1</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington_Model_1841 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington_Model_1841">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Muzzle-loading"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1400</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1800</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.82</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington_Model_1875 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Remington_Model_1875">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Single-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1250</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.69</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Saco_M60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Saco_M60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General-purpose"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">550</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3280</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.17</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -510,92 +1124,110 @@
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#caoaxial2 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Snake-Charmer_2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#caoaxial2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coaxial"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</hasWeight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Snake-Charmer_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Snake-charmer"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4500</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">160</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.5</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#gp1 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Springfield_Model_1816 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#gp1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General-purpose"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Semi-automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1500</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.23</hasWeight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Springfield_Model_1816">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Muzzle-loading"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2100</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">450</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.12</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#na1 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Supreme_Double_Trigger -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#na1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General-purpose"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Semi-automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.63</hasWeight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Supreme_Double_Trigger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Coach-gun"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Institutional-safety"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6200</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">450</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.5</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#navel1 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Whitney_Model_1861_navy -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#navel1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Whitney_Model_1861_navy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Single-action"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">900</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.43</firearm:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#4.5_inch_Mark_8_naval_gun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#4.5_inch_Mark_8_naval_gun">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Naval-artillery"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">800</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2300</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.23</hasWeight>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">70000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90223</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1197.3</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#pist1 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Brugger_&amp;_Thomet_MP9 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#pist1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Caplock"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Manual"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">490</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">450</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">700</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.25</hasWeight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Brugger_&amp;_Thomet_MP9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Machine-pistol"/>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Handgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Ease-of-transport"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">900</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">246</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.09</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#rt1 -->
+    <!-- http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General_Electric_GAU-17/A_Minigun -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#rt1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#General_Electric_GAU-17/A_Minigun">
         <rdf:type rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Rotarycanon"/>
-        <hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
-        <hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
-        <hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
-        <hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#int">230</hasFireRate>
-        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">900</hasPrice>
-        <hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1500</hasRange>
-        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">58.5</hasWeight>
+        <firearm:hasConfiguration rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Longgun"/>
+        <firearm:hasFunction rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Automatic"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Attack-aerial-vehicle"/>
+        <firearm:hasPurpose rdf:resource="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Continuous-fire"/>
+        <firearm:hasFireRate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4000.0</firearm:hasFireRate>
+        <firearm:hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21000</firearm:hasPrice>
+        <firearm:hasRange rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3280</firearm:hasRange>
+        <firearm:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.27</firearm:hasWeight>
     </owl:NamedIndividual>
     
 
@@ -617,15 +1249,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Carbine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Double-percussion"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Muzzle-loading"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Caplock"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Flintlock"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Machine-pistol"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/promod/ontologies/2019/6/firearm#Wheellock"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

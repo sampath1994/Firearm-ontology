@@ -22,10 +22,10 @@ public class MainController {
 
 	@FXML private TableView<Gun> tableView;
     @FXML private TableColumn<Gun, String> gunName;
-    @FXML private TableColumn<Gun, String> weight;
-    @FXML private TableColumn<Gun, String> range;
-    @FXML private TableColumn<Gun, String> fireRate;
-    @FXML private TableColumn<Gun, String> price;
+    @FXML private TableColumn<Gun, Double> weight;
+    @FXML private TableColumn<Gun, Integer> range;
+    @FXML private TableColumn<Gun, Integer> fireRate;
+    @FXML private TableColumn<Gun, Integer> price;
     @FXML private ComboBox<String> functionBox;
     @FXML private ComboBox<String> configBox;
     @FXML private ComboBox<String> purposeBox;
@@ -36,10 +36,10 @@ public class MainController {
    
     public void initialize() {
     	gunName.setCellValueFactory(new PropertyValueFactory<Gun, String>("gunName"));
-    	weight.setCellValueFactory(new PropertyValueFactory<Gun, String>("weight"));
-    	range.setCellValueFactory(new PropertyValueFactory<Gun, String>("range"));
-    	fireRate.setCellValueFactory(new PropertyValueFactory<Gun, String>("fireRate"));
-    	price.setCellValueFactory(new PropertyValueFactory<Gun, String>("price"));
+    	weight.setCellValueFactory(new PropertyValueFactory<Gun, Double>("weight"));
+    	range.setCellValueFactory(new PropertyValueFactory<Gun, Integer>("range"));
+    	fireRate.setCellValueFactory(new PropertyValueFactory<Gun, Integer>("fireRate"));
+    	price.setCellValueFactory(new PropertyValueFactory<Gun, Integer>("price"));
        
     	functionBox.getItems().setAll("All Function","Automatic","Manual","Selective-fire","Semi-automatic");
     	functionBox.getSelectionModel().select(0);
@@ -85,7 +85,7 @@ public class MainController {
 	}
 	
 	public void test() {
-		l.add(new Gun("AK47","0.5","2000","1450","300USD"));
-    	tableView.getItems().setAll(l);
+		//l.add(new Gun("AK47","0.5","2000","1450","300USD"));
+    	//tableView.getItems().setAll(l);
 	}
 }

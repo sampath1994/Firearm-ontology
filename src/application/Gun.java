@@ -2,15 +2,15 @@ package application;
 
 public class Gun {
 	    private String gunName;
-	    private String weight;
-	    private String range;
-	    private String fireRate;
-	    private String price;
+	    private double weight;
+	    private int range;
+	    private int fireRate;
+	    private int price;
 
 	    public Gun() {
 	    	
 	    }
-	    public Gun(String gunName, String weight, String range, String fireRate, String price) {
+	    public Gun(String gunName, double weight, int range, int fireRate, int price) {
 			super();
 			this.gunName = gunName;
 			this.weight = weight;
@@ -27,35 +27,35 @@ public class Gun {
 	        this.gunName = gunname;
 	    }
 
-		public String getWeight() {
+		public double getWeight() {
 			return weight;
 		}
 
-		public void setWeight(String weight) {
+		public void setWeight(double weight) {
 			this.weight = weight;
 		}
 
-		public String getRange() {
+		public int getRange() {
 			return range;
 		}
 
-		public void setRange(String range) {
+		public void setRange(int range) {
 			this.range = range;
 		}
 
-		public String getFireRate() {
+		public int getFireRate() {
 			return fireRate;
 		}
 
-		public void setFireRate(String fireRate) {
+		public void setFireRate(int fireRate) {
 			this.fireRate = fireRate;
 		}
 
-		public String getPrice() {
+		public int getPrice() {
 			return price;
 		}
 
-		public void setPrice(String price) {
+		public void setPrice(int price) {
 			this.price = price;
 		}
 
